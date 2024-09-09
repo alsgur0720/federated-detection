@@ -8,7 +8,7 @@
         ```
         And activate the environment.
         ```
-        conda activate fedpure
+        conda activate feddet
         ```
 
     1. Install the requirements
