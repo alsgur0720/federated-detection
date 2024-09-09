@@ -4,7 +4,7 @@
 
     0. [Optional but recommended] create a new conda environment.
         ```
-        conda create -n fedpure python=3.10.0
+        conda create -n feddet python=3.10.0
         ```
         And activate the environment.
         ```
