@@ -31,7 +31,6 @@ from torch.utils.data import Subset
 
 import flwr as fl
 from flwr.common import ndarrays_to_parameters, parameters_to_ndarrays
-from model.autoenco import Purifier
 # import resource
 # rlimit = resource.getrlimit(resource.RLIMIT_NOFILE)
 # resource.setrlimit(resource.RLIMIT_NOFILE, (2048, rlimit[1]))
@@ -414,9 +413,6 @@ class FederatedClient(fl.client.NumPyClient):
                     data = data.float().cuda(self.device)
                     label = label.long().cuda(self.device)
                 timer['dataloader'] += self.split_time()
-
-                if lambda_mal :
-                    data = Purifier(data)
                 
                 reference_frame = rearrange(reference_frame[:,:,:,0], 'x y z -> y z x')
                 data_t = rearrange(data[:,:,:,0], 'x y z -> y z x')
