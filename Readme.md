@@ -27,7 +27,7 @@ python prepare_fed.py -- round 300
 
 # Train federated skeleton-based action recognition
 
-CTR-GCN + FedPure
+CTR-GCN + FedDet
 
 python main_federated.py --config ./config/default.yaml --work-dir "your_work_directory" --phase train --save-score True --device "your_device_number" --num_clients 10 --client_id 0
 
@@ -36,7 +36,7 @@ python main_federated.py --config ./config/default.yaml --work-dir "your_work_di
 Setting the num-client argument to 10 and running client_id from 0 to 9 will train a total of 10 clients.
 
 
-STGCN + FedPure
+STGCN + FedDet
 
 python main_federated.py --config ./config/default_stgcn.yaml --work-dir "your_work_directory" --phase train --save-score True --device "your_device_number" --num_clients 10 --client_id 0
 
@@ -45,7 +45,7 @@ python main_federated.py --config ./config/default_stgcn.yaml --work-dir "your_w
 Setting the num-client argument to 10 and running client_id from 0 to 9 will train a total of 10 clients.
 
 
-HD-GCN + FedPure
+HD-GCN + FedDet
 
 python main_federated.py --config ./config/default_hdgcn.yaml --work-dir "your_work_directory" --phase train --save-score True --device "your_device_number" --num_clients 10 --client_id 0
 
