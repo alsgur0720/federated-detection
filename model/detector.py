@@ -118,7 +118,7 @@ def calculate_angle(skeleton, joint_indices):
 #     else:
 #         count +=1
 
-def Data_poisoning_attack_detector(transform_prototype, velocity, reference_frame):
+def Prototype_based_attack_detector(transform_prototype, velocity, reference_frame):
     save = []
     max_corrs = {}
     max_corr_indexes = {}
