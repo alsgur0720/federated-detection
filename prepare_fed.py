@@ -8,7 +8,7 @@ import traceback
 from flwr.common import ndarrays_to_parameters
 import torch.optim as optim
 from model.ctrgcn import import_class
-from model.fedpure import FedPure
+from model.fedpure import FedDet
 
 reference_frame = np.load('./reference_frame.npy')
 
@@ -51,7 +51,7 @@ def get_initial_parameters():
 
 initial_parameters = get_initial_parameters()
 
-strategy = FedPure(
+strategy = FedDet(
     evaluate_metrics_aggregation_fn=weighted_average,
     min_available_clients=3,
     min_fit_clients=3,
