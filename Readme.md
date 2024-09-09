@@ -1,6 +1,3 @@
-# Data Poisoning Attack Detection and Purification for Fedrated Skeleton-based Action Recognition
-
-
 ## Environment
 
 - The code is developed with CUDA 12.2, ***Python >= 3.10.0***, ***PyTorch >= 2.0.0***
