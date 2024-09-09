@@ -17,7 +17,7 @@ from flwr.server.strategy.fedopt import FedOpt
 from detector import Data_poisoning_attack_detector
 
 # pylint: disable=line-too-long
-class FedPure(FedOpt):
+class FedDet(FedOpt):
     
     def __init__(
         self,
