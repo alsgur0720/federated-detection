@@ -14,7 +14,7 @@ from flwr.common import (
 from flwr.server.client_proxy import ClientProxy
 
 from flwr.server.strategy.fedopt import FedOpt
-from detector import Data_poisoning_attack_detector
+from detector import Prototype_based_attack_detector
 
 # pylint: disable=line-too-long
 class FedDet(FedOpt):
@@ -95,7 +95,7 @@ class FedDet(FedOpt):
         
         else :
             
-            self.lambda_mal = Data_poisoning_attack_detector(transform_prototype, velocity, reference_frame)
+            self.lambda_mal = Prototype_based_attack_detector(transform_prototype, velocity, reference_frame)
             
             if self.lambda_mal:
             
